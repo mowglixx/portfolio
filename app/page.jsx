@@ -1,24 +1,19 @@
-import Navlink from "@/components/villages/Navlink";
+'use client'
 
+import Header from "@/components/organisms/Header"
+import Hero from "@/components/organisms/Hero"
+export default function Page() {
 
-
-export default function Home() {
   return (
-    <header>
-      <div className="navWrapper">
-        <h1 className="navLogo">mowglixx</h1>
-        <button className="navControls">
-          <span className="srOnly">menu</span>
-        </button>
-      </div>
-      <nav className={`mainNav`} aria-label="main navigation">
-        <ul>
-          <li><Navlink href="#" className="navLink" title="About">ABT</Navlink></li>
-          <li><Navlink href="#" className="navLink" title="Work">WRK</Navlink></li>
-          <li><Navlink href="#" className="navLink" title="Fun">FUN</Navlink></li>
-          <li><Navlink href="#" className="navLink" title="Contact">CNT</Navlink></li>
-        </ul>
-      </nav>
-    </header>
+    <>
+      <Header />
+      <Hero heading="Howdy" body="I'm Dan, I'm a ['Developer', 'Trainer', 'Nerd']" cta={{
+        action: (e) => console.log(e),
+        label: 'click me'
+      }} image={{
+        src: 'https://placehold.co/600x400.jpg',
+        alt: 'oh my'
+      }} />
+    </>
   )
 }

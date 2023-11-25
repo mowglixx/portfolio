@@ -1,3 +1,19 @@
+:root {
+  // 60/30/10 Colors
+  // neutrals - 60
+  //
+  --background-color: hsl(293, 22%, 15%);
+  --on-background-color: hsl(0, 0%, 100%);
+
+  // accent - colors for elements on bg - 30
+  --accent-color: hsl(35, 100%, 51%);
+  --on-accent-color: hsl(0, 0%, 0%);
+
+  // theme / cta - standout - 10
+  --theme-color: hsl(14, 84%, 53%);
+  --on-theme-color: hsl(0, 0%, 0%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +26,9 @@
 }
 
 body {
+  color-scheme: dark;
+  background-color: var(--background-color);
+  color: var(--on-background-color);
   font-size: 16px;
   position: relative;
   display: grid;
