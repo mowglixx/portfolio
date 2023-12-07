@@ -2,17 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  > ul {
+  width: 100%;
+  clip-path: circle(150% from center);
+
+  >ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     margin: 0;
     text-align: center;
-    > li {
-      > .navLink {
+
+    >li {
+      >.navLink {
         display: flex;
         flex-direction: row;
         padding: 5rem;
+        color-scheme: dark;
       }
     }
   }

@@ -1,9 +1,9 @@
 import Navlink from "@/components/atoms/Navlink";
 import styles from './Navbar.module.scss'
 
-export default function Navbar() {
+export default function Navbar({expanded = false}) {
   return (
-    <nav className={styles.mainNav} aria-label="main navigation">
+    <nav className={`${styles.mainNav} ${expanded ? styles.open: ''}`} aria-label="main navigation" aria-expanded={`${expanded}`}>
       <ul>
         <li><Navlink href="#" title="About">ABT</Navlink></li>
         <li><Navlink href="#" title="Work">WRK</Navlink></li>

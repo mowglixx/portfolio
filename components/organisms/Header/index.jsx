@@ -4,6 +4,8 @@ import styles from './Header.module.scss'
 export default function Header() {
   return (
     <header className={styles.navHeader}>
+      <div className={styles.headerWrapper}>
+
       <div className={styles.navWrapper}>
         <h1 className={styles.navLogo}>mowglixx</h1>
         <button className={styles.navControls}>
@@ -11,6 +13,7 @@ export default function Header() {
         </button>
       </div>
       <Navbar />
+      </div>
     </header>
   );
 }

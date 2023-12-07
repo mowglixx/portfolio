@@ -12,6 +12,7 @@
   // theme / cta - standout - 10
   --theme-color: hsl(14, 84%, 53%);
   --on-theme-color: hsl(0, 0%, 0%);
+  font-size: 16px;
 }
 
 * {
@@ -21,28 +22,52 @@
   background: none;
   background-color: none;
   border: none;
+  font-size: 1rem;
   border-radius: none;
-  cursor: default;
 }
 
 body {
   color-scheme: dark;
   background-color: var(--background-color);
   color: var(--on-background-color);
-  font-size: 16px;
+  font-family: var(--main-font);
+  font-size: 1rem;
   position: relative;
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "header"
     "main"
     "aside"
     "footer";
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: var(--header-font);
 }
 
 button,
 a,
 li:has(a) {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 header,

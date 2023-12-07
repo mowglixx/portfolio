@@ -1,13 +1,8 @@
-.navHeader {
+.navFooter {
   display: grid;
-  grid-area: header;
+  grid-area: footer;
   background-color: var(--accent-color);
   color: var(--on-accent-color);
-}
-
-.headerWrapper {
-  display: flex;
-  overflow: hidden;
 }
 
 .navWrapper {
