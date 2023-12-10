@@ -4,22 +4,34 @@
   background-color: var(--background-color);
   padding: 10dvh 10dvw;
 
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .heroHeading {
     display: flex;
     flex-direction: column;
     color: var(--on-background-color);
     font-family: var(--header-font);
-    font-size: 5rem;
+    max-width: 100%;
   }
 
   .heroBody {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
 
   .heroCTA {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
+    padding: var(--header-size-xs) var(--header-size-md);
+    background-color: var(--accent-color);
+    color: var(--on-accent-color);
+    font-weight: bold;
+    border-radius: var(--rounding-sm);
   }
 
   .heroImage {

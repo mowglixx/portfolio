@@ -1,12 +1,15 @@
 .navHeader {
   display: grid;
+  position: relative;
   grid-area: header;
-  background-color: var(--accent-color);
-  color: var(--on-accent-color);
+  background-color: var(--theme-color);
+  color: var(--on-theme-color);
+  font-size: 2.5rem;
 }
 
 .headerWrapper {
   display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 

@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  grid-area: main;
+  padding: clamp(5dvw, 2rem, 10dvw);
+  width: 100%;
+  isolation: isolate;
+  z-index: 10;
+}

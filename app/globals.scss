@@ -12,7 +12,35 @@
   // theme / cta - standout - 10
   --theme-color: hsl(14, 84%, 53%);
   --on-theme-color: hsl(0, 0%, 0%);
-  font-size: 16px;
+
+  // base-font-size
+  // set here
+  --base-font-size: 16px;
+  // not here
+  font-size: var(--base-font-size);
+
+  // header sizes
+  --header-scale-factor: 1.25;
+  --header-size-xs: calc(var(--base-font-size) * var(--header-scale-factor));
+  --header-size-sm: calc(var(--header-size-xs) * var(--header-scale-factor));
+  --header-size-md: calc(var(--header-size-sm) * var(--header-scale-factor));
+  --header-size-lg: calc(var(--header-size-md) * var(--header-scale-factor));
+  --header-size-xl: calc(var(--header-size-lg) * var(--header-scale-factor));
+
+  // breakpoints
+  --breakpoint-mobile: 500px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1200px;
+  --breakpoint-desktop: 1600px;
+  --breakpoint-desktop-uhd: 2500px;
+
+
+  // rounding
+
+  --rounding-sm: 1rem;
+  --rounding-md: calc(var(--rounding-sm) * var(--header-scale-factor));
+  --rounding-lg: calc(var(--rounding-md) * var(--header-scale-factor));
+  --rounding-xl: calc(var(--rounding-lg) * var(--header-scale-factor));
 }
 
 * {
@@ -30,23 +58,25 @@ body {
   color-scheme: dark;
   background-color: var(--background-color);
   color: var(--on-background-color);
+  /* set in next layout*/
   font-family: var(--main-font);
-  font-size: 1rem;
+  font-size: var(--base-font-size);
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
+  min-height: 100dvh;
+  grid-template-columns: 1;
   grid-template-areas:
     "header"
     "main"
     "aside"
     "footer";
 
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: auto 20vw;
     grid-template-areas:
       "header header"
       "main aside"
-      "footer footer";
+      "footer footer" !important;
 
   }
 }
@@ -61,7 +91,33 @@ h4,
 .h4,
 h5,
 .h5 {
+  /* set in next layout*/
   font-family: var(--header-font);
+}
+
+h1,
+.h1 {
+  font-size: var(--header-size-xl);
+}
+
+h2,
+.h2 {
+  font-size: var(--header-size-lg);
+}
+
+h3,
+.h3 {
+  font-size: var(--header-size-md);
+}
+
+h4,
+.h4 {
+  font-size: var(--header-size-sm);
+}
+
+h5,
+.h5 {
+  font-size: var(--header-size-xs);
 }
 
 button,
@@ -79,4 +135,9 @@ section,
 article {
   display: flex;
   flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
