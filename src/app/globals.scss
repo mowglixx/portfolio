@@ -2,15 +2,18 @@
   // 60/30/10 Colors
   // neutrals - 60
   //
-  --background-color: hsl(293, 22%, 15%);
+  --background-color: hsl(0, 0%, 0%);
+  --background-color-transparent: hsla(0, 0%, 0%, 0.5);
   --on-background-color: hsl(0, 0%, 100%);
 
   // accent - colors for elements on bg - 30
   --accent-color: hsl(35, 100%, 51%);
+  --accent-color-transparent: hsla(35, 100%, 51%, 0.5);
   --on-accent-color: hsl(0, 0%, 0%);
 
   // theme / cta - standout - 10
   --theme-color: hsl(14, 84%, 53%);
+  --theme-color-transparent: hsla(14, 84%, 53%, 0.5);
   --on-theme-color: hsl(0, 0%, 0%);
 
   // base-font-size
@@ -63,13 +66,16 @@ body {
   font-size: var(--base-font-size);
   position: relative;
   display: grid;
-  min-height: 100dvh;
+  min-height: 100svh;
   grid-template-columns: 1;
   grid-template-areas:
     "header"
     "main"
     "aside"
     "footer";
+  isolation: isolate;
+  backdrop-filter: blur(5px);
+  overflow-x: hidden;
 
   @media screen and (min-width: 1200px) {
     grid-template-columns: auto 20vw;

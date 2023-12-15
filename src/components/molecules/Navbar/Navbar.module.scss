@@ -1,14 +1,20 @@
 .mainNav {
+  --nav-bg-color: var(--theme-color);
+  --on-link-color: var(--on-theme-color);
   display: flex;
+  flex-direction: column;
   position: absolute;
   top: 99%;
   background-color: var(--theme-color);
-  flex-direction: column;
+  backdrop-filter: blur(250px);
   align-items: center;
   width: 100%;
   clip-path: circle(0% at (top 0%)(right 5%));
   overflow: hidden;
   transition: clip-path 0.3s ease-out;
+  z-index: 10;
+  padding: 1rem;
+
 
   &.open {
     clip-path: circle(150% at (top 0%) (right 5%));
@@ -16,18 +22,28 @@
 
   >ul {
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     list-style-type: none;
     margin: 0;
     text-align: center;
 
     >li {
-      >.navLink {
-        --link-color: pink;
+      display: flex;
+
+
+      >a {
         display: flex;
         flex-direction: row;
-        padding: 5rem;
         color-scheme: dark;
+        color: var(--link-color);
+        padding: 1rem;
+        width: 100%;
+
+        &:hover {
+          background-color: var(--link-color);
+          color: var(--on-link-color);
+        }
       }
     }
   }

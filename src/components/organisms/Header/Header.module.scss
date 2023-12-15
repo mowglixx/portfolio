@@ -1,16 +1,21 @@
 .navHeader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: position 0.3s ease-in-out;
   display: grid;
-  position: relative;
   grid-area: header;
   background-color: var(--theme-color);
   color: var(--on-theme-color);
   font-size: 2.5rem;
+  z-index: 10;
 }
 
 .headerWrapper {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  font-family: var(--header-font);
 }
 
 .navWrapper {

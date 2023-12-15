@@ -1,0 +1,37 @@
+.aside {
+  display: flex;
+  grid-area: aside;
+  background-color: var(--background-color-transparent);
+  // padding: clamp(5dvw, 2rem, 10dvw);
+
+  backdrop-filter: blur(50px);
+  padding: 1rem;
+  gap: 1rem;
+
+}
+
+.asideSection,
+.asideSectionHeader,
+.asideSectionBody,
+.asideSectionFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.asideSectionHeader {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--header-font);
+  max-width: 100%;
+}
+
+.asideSectionBody {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.asideSectionFooter {
+  display: flex;
+  flex-direction: column;
+}

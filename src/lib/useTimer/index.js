@@ -9,3 +9,5 @@ export const useTimer = (callbackFunction = () => { return; }, milliseconds = 0)
   const timer = setTimeout(callbackFunction, milliseconds)
   return [timer, () => clearTimeout(timer)]
 }
+
+export const useTimerLoop = (callbackFunction = () => {return;} )

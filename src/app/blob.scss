@@ -1,0 +1,33 @@
+.blob {
+  --width: 200px;
+  --height: 200px;
+  content: ' ';
+  position: absolute;
+  left: calc(50svw - calc(var(--width) / 2));
+  top: calc(50svh - calc(var(--height) / 2));
+  display: fixed;
+  background-color: var(--background-color);
+  background: #000;
+  background-image: radial-gradient(at 67.9% 99.7%, #ff9705 0px, transparent 50%), radial-gradient(at 0.0% 24.0%, hsl(14, 84%, 53%) 0px, transparent 50%), radial-gradient(at 44.7% 56.7%, #a3a3a3 0px, transparent 50%);
+  min-width: var(--width);
+  min-height: var(--height);
+  width: var(--width);
+  height: var(--height);
+  font-size: 0px;
+  z-index: -1 !important;
+  opacity: 0.7;
+  // transition: left 0.4s ease-out 0ms top 0.4s ease-out 0ms;
+  border-radius: 50%;
+  animation: infinite spin 20s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+
+  }
+}

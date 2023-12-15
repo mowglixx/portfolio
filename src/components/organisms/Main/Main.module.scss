@@ -4,6 +4,8 @@
   grid-area: main;
   padding: clamp(5dvw, 2rem, 10dvw);
   width: 100%;
-  isolation: isolate;
-  z-index: 10;
+  height: fit-content;
+  overflow: hidden;
+  backdrop-filter: invert(80%) blur(50px);
+  gap: 1rem;
 }
